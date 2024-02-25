@@ -32,7 +32,7 @@ const RegisterModal = () => {
           registerModal.onClose();
         })
         .catch((error) => {
-          toast.error("Something went wrong.")
+          toast.error("Something went wrong.");
         })
         .finally(() => {
           setIsLoading(false);
@@ -70,15 +70,16 @@ const RegisterModal = () => {
     </div>
   );
   const footerContent = (
-      <div className="text-neutral-500 text-center mt-4 font-light">
-        <hr/>
-       <div className="flex flex-row justify-center items-center mt-4 gap-2">
+    <div className="text-neutral-500 text-center mt-4 font-light">
+      <hr />
+      <div className="flex flex-row justify-center items-center mt-4 gap-2">
         <div>Already have an account?</div>
-        <div className="text-neutral-800 cursor-pointer hover:underline transition">Login</div>
-       </div>
-       </div>
-           
-  )
+        <div onClick={registerModal.onClose} className="text-neutral-800 cursor-pointer hover:underline transition">
+          Login
+        </div>
+      </div>
+    </div>
+  );
   return (
     <Modal
       disabled={isLoading}
