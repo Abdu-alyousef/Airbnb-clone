@@ -10,9 +10,11 @@ import Input from "../inputs/Input";
 import toast from "react-hot-toast";
 import useLoginModal from "../hooks/useLoginModal";
 import { useRouter } from "next/navigation";
+import useRegisterModal from "../hooks/useRegisterModal";
 
 const LoginModal = () => {
   const loginModal = useLoginModal();
+  const registerModal = useRegisterModal();
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
