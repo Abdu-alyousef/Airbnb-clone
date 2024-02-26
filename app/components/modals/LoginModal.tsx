@@ -47,6 +47,11 @@ const LoginModal = () => {
      })
   };
 
+  const toggle = () => {
+    loginModal.onClose();
+    registerModal.onOpen()
+  }
+
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading title="Welcome back" subtitle="Login to your account" />
@@ -74,7 +79,7 @@ const LoginModal = () => {
       <hr />
       <div className="flex flex-row justify-center items-center mt-4 gap-2">
         <div>Don't have an account?</div>
-        <div onClick={loginModal.onClose} className="text-neutral-800 cursor-pointer hover:underline transition">
+        <div onClick={toggle} className="text-neutral-800 cursor-pointer hover:underline transition">
           Sign up
         </div>
       </div>
